@@ -1,0 +1,1328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #FFD700; /* Sarı */
+    --secondary-color: #000000; /* Siyah */
+    --text-color: #ffffff;
+    --background-color: #1a1a1a;
+}
+
+.top-info-bar {
+    background-color: #333;
+    padding: 8px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1020;
+    
+}
+.top-info-bar a{
+    text-decoration: none;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.business-info {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+
+.business-info > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.business-info i,
+.location-info i {
+    color: #fff;
+}
+
+.social-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.social-contact a {
+    color: #fff; /* Beyaz ikon rengi */
+    transition: color 0.3s ease;
+}
+
+.social-contact a:hover {
+    color: #fff; /* Hover durumunda altın sarısı */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 400; /* Normal metinler için regular */
+}
+
+header {
+    position: fixed;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    z-index: 1006;
+    background: none; /* Header'ın arka planını kaldıralım */
+}
+
+nav {
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 60%,
+        rgba(0, 0, 0, 0.7) 80%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 0 25px;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    padding: 5px 0;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.hero {
+    
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('images/foto5.jfif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+    
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    padding: 0 20px;
+    animation: slideUp 1s ease-out;
+    
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: titleIn 1s ease-out;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    color:#f5f5f5;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+    
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    animation: buttonPop 1s ease-out 0.5s backwards;
+}
+
+.cta-button:hover {
+    background-color: #ffed4a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasyon tanımlamaları */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes titleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 5rem 10%;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600; /* Başlıklar için semi-bold */
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.exercise-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-10px);
+}
+
+.video-placeholder {
+    height: 200px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.exercise-card h3 {
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+.exercise-card p {
+    padding: 0 1rem 1rem;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: var(--text-color);
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ffcc00;
+}
+
+footer {
+    background-color: #000;
+    padding: 60px 0 20px 0;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Mesaj Bölümü Fotoğraf Stilleri */
+.message-image {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    aspect-ratio: 1 / 1; /* Kare oran için */
+    position: relative;
+}
+
+.message-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fotoğrafı kare alana sığdırır */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.message-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Mesaj Butonu */
+.footer-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #ffed4a;
+    transform: translateY(-2px);
+}
+
+/* Çalışma Saatleri */
+.working-hours li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* İletişim Bilgileri */
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ffd700;
+}
+
+/* Sosyal Medya Linkleri */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+}
+
+/* Telif Hakkı */
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #fff;
+}
+
+/* Footer içindeki paragraflar */
+.footer-column p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message-image {
+        width: 50%; /* Logo boyutunu biraz büyüttük */
+        margin: 0 auto 20px auto; /* Üstten ve alttan margin, sağdan soldan auto ile ortalama */
+    }
+
+    .working-hours li, 
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* İçerikleri dikey eksende ortala */
+        text-align: center;
+        margin-bottom: 30px; /* Sütunlar arası boşluk */
+    }
+
+    .footer-column h3,
+    .footer-column p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding-left: 2rem;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        margin: 0.25rem 0;
+    }
+
+    .nav-links a {
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 0;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.2rem 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .mobile-menu {
+        align-items: flex-start;
+        padding-top: 2.5rem;
+    }
+}
+
+/* Banner Bölümü */
+.gallery-banner {
+    
+    width: 100%;
+    height: 45vh;
+    background-image: url('images/foto7.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Alt hizalama */
+    justify-content: flex-start; /* Sol hizalama */
+    overflow: hidden;
+}
+
+.gallery-banner h1 {
+    color: #fff;
+    font-size: 2rem; /* Yazı boyutunu küçülttük */
+    font-weight: bold;
+    
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-left: 50px; /* Sol boşluk */
+    margin-bottom: 30px; /* Alt boşluk */
+}
+
+/* Galeri Bölümü */
+.gallery-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    min-height: calc(75vh - 146px); /* Kalan yükseklik */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hafif gölge */
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.2); /* Hover durumunda daha belirgin gölge */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    opacity: 0.9; /* Hafif mat görünüm */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    opacity: 1; /* Hover durumunda tam opaklık */
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .gallery-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery-section {
+        padding: 30px 15px; /* Padding'i azalttık */
+    }
+
+    .gallery-grid {
+        gap: 15px; /* Fotoğraflar arası boşluğu azalttık */
+    }
+
+    .gallery-item {
+        border-radius: 6px; /* Köşe yuvarlaklığını azalttık */
+    }
+
+    .gallery-item img {
+        height: 200px; /* Fotoğraf yüksekliğini 300px'den 200px'e düşürdük */
+    }
+
+    /* Grid yapısını düzenleyelim */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Minimum genişliği azalttık */
+        max-width: 100%;
+    }
+}
+
+/* Tablet boyutu için orta seviye bir düzenleme */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-item img {
+        height: 250px; /* Tablet için orta seviye bir yükseklik */
+    }
+}
+
+/* Slider Bölümü */
+.slider-section {
+    margin-top: 146px; /* Navbar yüksekliği kadar */
+    background: #000;
+    padding: 20px 0;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #fff; /* İnce beyaz çerçeve */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 500px; /* Slider yüksekliği */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider Noktaları */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 215, 0, 0.5); /* Yarı saydam sarı */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #ffd700; /* Tam sarı */
+}
+
+.dot.active {
+    background-color: #ffd700; /* Aktif nokta tam sarı */
+    transform: scale(1.2); /* Aktif noktayı biraz büyüt */
+}
+
+/* Ana sayfa (index.html) için */
+body {
+    background-color: #fff;
+}
+
+/* Hero section altındaki bölümler için */
+.about, 
+.exercises, 
+.contact {
+    background-color: #fff;
+    color: #333; /* Koyu gri metin rengi */
+}
+
+/* Başlıklar için */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Başlıklar için semi-bold */
+}
+
+/* Paragraflar için */
+p {
+    color: #666;
+}
+
+/* Modal ve Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9998; /* Çok yüksek z-index */
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-modal {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999; /* En yüksek z-index */
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.contact-modal.active {
+    right: 0;
+}
+
+.modal-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #ffd700;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+/* Form Stilleri */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-info-item i {
+    color: #ffd700;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/* Mobil Menu Butonu - varsayılan olarak gizli */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* Mobil düzenlemeler */
+@media screen and (max-width: 768px) {
+    /* Top Info Bar */
+    .top-info-bar {
+        background-color: #333;
+        height: 40px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1010;
+    }
+
+    /* Konum linki */
+    .location-info {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .location-info:hover {
+        color: #ffd700; /* Hover efekti */
+    }
+
+    .location-info i {
+        margin-right: 5px;
+        color: inherit; /* Üst elementin rengini al */
+    }
+
+    /* Sosyal medya ikonları - sağda */
+    .social-contact {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: none;
+    }
+
+    .social-contact a {
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+
+    /* Business info ve email'i gizle */
+    .business-info, 
+    .email {
+        display: none;
+    }
+
+    /* Tüm alt çizgileri kaldır */
+    .top-info-bar *,
+    .top-info-bar *::before,
+    .top-info-bar *::after {
+        border-bottom: none !important;
+        text-decoration: none !important;
+    }
+
+    /* İkonları aynı boyuta getir */
+    .social-contact i,
+    .location-info i {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hover efekti */
+    .social-contact a:hover {
+        color: #ffd700;
+        text-decoration: none;
+    }
+
+    /* Header ve Navbar */
+    header {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        z-index: 1009;
+    }
+
+    nav {
+        padding: 10px 15px;
+        background: linear-gradient(to bottom, 
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0.7) 80%,
+            rgba(0, 0, 0, 0) 100%
+        ) !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 80px;
+        width: 100%;
+    }
+
+    /* Logo */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    .logo img {
+        height: 65px;
+        width: auto;
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Hamburger Menu Butonu */
+    .mobile-menu-btn {
+        display: block !important; /* Görünürlüğü zorla */
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1008;
+        width: 40px; /* Sabit genişlik */
+        height: 40px; /* Sabit yükseklik */
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    .mobile-menu-btn i {
+        font-family: 'Font Awesome 6 Free' !important; /* Font Awesome için font family override */
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    /* Mobil Menü */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        z-index: 1012;
+        transition: left 0.3s ease;
+        padding-top: 60px;
+    }
+
+    .mobile-menu.active {
+        left: 0;
+    }
+
+    /* Navigasyon Linkleri */
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 15px;
+        color: #dfdfdf;
+        text-decoration: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: left;
+        transition: background 0.3s ease;
+    }
+
+    /* Logo pozisyonu */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo img {
+        height: 65px;
+        width: auto;
+    }
+
+    /* Overlay */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1011;
+        backdrop-filter: blur(5px);
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    /* Scroll durumunda solid background */
+    nav.solid-nav {
+        background: #000 !important;
+    }
+
+    /* Mobil menü açıkken solid background */
+    nav:has(.mobile-menu.active) {
+        background: #000 !important;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Modal Mobil Stili */
+    .contact-modal {
+        max-width: 100%;
+        top: 0;
+    }
+
+    .modal-content {
+        padding: 15px;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .modal-header {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 10000; /* Modal header her zaman üstte */
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Footer Mobil Stili */
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .working-hours li {
+        justify-content: center;
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Tablet Boyutu için Ek Stiller */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+}
+
+/* Galeri Sayfası Mobil Stili */
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .gallery-banner {
+        height: 25vh;
+    }
+
+    .gallery-banner h1 {
+        font-size: 1.4rem;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Scroll durumunda navbar */
+nav.solid-nav {
+    background: #000;
+}
+
+/* Navbar scroll durumu */
+nav {
+    transition: background 0.3s ease;
+}
+
+nav.solid-nav {
+    background: #000 !important;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+        background: linear-gradient(to bottom, 
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0.7) 80%,
+            rgba(0, 0, 0, 0) 100%
+        ) !important;
+        transition: background 0.3s ease;
+    }
+
+    nav.solid-nav {
+        background: #000 !important;
+        transition: background 0.3s ease;
+    }
+}
+
+/* Mobil menü kapatma butonu - sadece mobilde görünsün */
+.mobile-menu-close {
+    display: none; /* Varsayılan olarak gizli */
+}
+
+/* Normal ekranda mobil elementleri gizle */
+@media screen and (min-width: 769px) {
+    .mobile-menu-btn,
+    .mobile-menu-close,
+    .menu-overlay {
+        display: none !important;
+    }
+}
+
+/* Mobil görünümde kapatma butonunu göster */
+@media screen and (max-width: 768px) {
+    .mobile-menu-close {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1013;
+    }
+}
+
+/* Top info bar ikonları için */
+.social-contact i,
+.location-info i {
+    font-family: 'Font Awesome 6 Free' !important;
+    font-weight: 900; /* Solid ikonlar için */
+}
+
+.social-contact .fab {
+    font-family: 'Font Awesome 6 Brands' !important; /* Brand ikonları için */
+}
+
+/* Kapatma ikonu için */
+.mobile-menu-close i {
+    font-family: 'Font Awesome 6 Free' !important;
+    font-weight: 900;
+}
+
+/* Tüm site için temel font ayarı */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Başlıklar için */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Başlıklar için semi-bold */
+}
+
+/* Paragraflar ve diğer text elementleri için */
+p, span, a, li, input, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Normal metinler için regular */
+}
+
+/* Navbar linkleri için */
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Menü linkleri için medium */
+}
+
+/* Font Awesome ikonlarını korumak için */
+.fas, .fab, .far, .fa {
+    font-family: 'Font Awesome 6 Free' !important;
+}
+
+.fab {
+    font-family: 'Font Awesome 6 Brands' !important;
+}
+
+.business-info .email {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1020; /* Parent element'e de yüksek z-index */
+}
+
+.business-info .email:hover {
+    color: #ffd700;
+}
+
+/* Tooltip için z-index ve pozisyon düzeltmesi */
+.business-info .email::before {
+    content: 'Tıkla ve Kopyala';
+    position: absolute;
+    top: 100%; /* Element'in tam altından başla */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1025; /* Daha yüksek z-index */
+    margin-top: 5px; /* Üstten biraz boşluk */
+}
+
+.business-info .email:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobil için özel düzenlemeler */
+@media (max-width: 768px) {
+    .business-info .email::before {
+        margin-top: 8px; /* Mobilde biraz daha fazla boşluk */
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+}
+

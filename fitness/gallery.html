@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - ALPEREN ALTAN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Üst Bilgi Çubuğu -->
+    <div class="top-info-bar">
+        <a href="https://maps.google.com/maps?q=39.809806,35.184528" 
+           class="location-info" 
+           target="_blank" 
+           title="Konuma Git">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Alperen Altan Spor Merkezi Yozgat Sorgun</span>
+        </a>
+
+        <div class="business-info">
+            <div class="hours">
+                <i class="far fa-clock"></i>
+                <span>08:00 - 23:00</span>
+            </div>
+            <div class="email" onclick="copyEmail()" title="Tıkla ve Kopyala">
+                <i class="far fa-envelope"></i>
+                <span id="emailText">info@alperenaltan.com</span>
+            </div>
+        </div>
+
+        <div class="social-contact">
+            <a href="tel:+905XXXXXXXXX" title="Bizi Arayın">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://instagram.com/INSTAGRAMHESABI" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/FACEBOOKHESABI" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/+905XXXXXXXXX" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="images/gym-logo.png" alt="Alperen Altan Spor Merkezi Logo">
+            </div>
+            <div class="mobile-menu">
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="index.html#about">Hakkımızda</a></li>
+                    <li><a href="index.html#exercises">Hareketler</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="#" class="contact-link">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="menu-overlay"></div>
+        </nav>
+    </header>
+
+    <!-- Üst Banner Bölümü -->
+    <div class="gallery-banner">
+        <div class="banner-overlay"></div>
+        <h1>Foto Galeri</h1>
+    </div>
+
+    <!-- Galeri Grid Bölümü -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <!-- Galeri öğeleri -->
+            <div class="gallery-item">
+                <img src="images/foto1.jfif" alt="Spor Salonu Görüntüsü 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/foto2.jfif" alt="Spor Salonu Görüntüsü 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/foto3.jfif" alt="Spor Salonu Görüntüsü 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/foto4.jfif" alt="Spor Salonu Görüntüsü 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/foto5.jfif" alt="Spor Salonu Görüntüsü 5">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Sol Sütun - Mesaj Bölümü -->
+            <div class="footer-column">
+                <div class="message-image">
+                    <img src="images/gym-logo.png" alt="Fitness Motivasyon">
+                </div>
+                <h3>Gelişmek İçin Bize Mesaj Atın</h3>
+                <p>Size özel program ve beslenme planı için hemen iletişime geçin.</p>
+                <a href="#" class="footer-button">Bize Mesaj Atın</a>
+            </div>
+
+            <!-- Orta Sütun - Çalışma Saatleri -->
+            <div class="footer-column">
+                <h3>Çalışma Saatleri</h3>
+                <ul class="working-hours">
+                    <li><span>Pazartesi</span> <span>08:00 - 23:00</span></li>
+                    <li><span>Salı</span> <span>08:00 - 23:00</span></li>
+                    <li><span>Çarşamba</span> <span>08:00 - 23:00</span></li>
+                    <li><span>Perşembe</span> <span>08:00 - 23:00</span></li>
+                    <li><span>Cuma</span> <span>08:00 - 23:00</span></li>
+                    <li><span>Cumartesi</span> <span>09:00 - 22:00</span></li>
+                    <li><span>Pazar</span> <span>09:00 - 22:00</span></li>
+                </ul>
+            </div>
+
+            <!-- Sağ Sütun - İletişim Bilgileri -->
+            <div class="footer-column">
+                <h3>İletişim Bilgileri</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Adres: Sorgun, Yozgat</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>Telefon: +90 XXX XXX XX XX</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>E-posta: info@alperenaltan.com</span>
+                    </li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Telif Hakkı -->
+        <div class="copyright">
+            <p>&copy; 2024 Alperen Altan Spor Merkezi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Bize Ulaşın</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-info-side">
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adres</h3>
+                            <p>Sorgun, Yozgat</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            <p>+90 XXX XXX XX XX</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>E-posta</h3>
+                            <p>info@alperenaltan.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-side">
+                    <form action="https://formspree.io/f/xdkerolg" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Konu" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay"></div>
+
+    <!-- JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Scroll özelliği için
+        const nav = document.querySelector('nav');
+        const headerHeight = 40; // Top info bar yüksekliği
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > headerHeight) {
+                nav.classList.add('solid-nav');
+            } else {
+                nav.classList.remove('solid-nav');
+            }
+        });
+
+        // Mevcut mobil menü kodları
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const menuLinks = document.querySelectorAll('.nav-links a');
+
+        function openMenu() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Menü açma/kapama
+        mobileMenuBtn.addEventListener('click', openMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Link tıklama olayları
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.classList.contains('contact-link')) {
+                    e.preventDefault();
+                    closeMenu();
+                    if (typeof openModal === 'function') {
+                        openModal();
+                    }
+                } else {
+                    closeMenu();
+                }
+            });
+        });
+
+        // Modal işlemleri için ek kod
+        const modal = document.getElementById('contactModal');
+        const modalOverlay = document.querySelector('.modal-overlay');
+        const openModalBtns = document.querySelectorAll('.contact-link, .footer-button');
+        const closeModalBtn = document.querySelector('.close-modal');
+
+        function openModal() {
+            modal.classList.add('active');
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal();
+            });
+        });
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+    });
+
+    function copyEmail() {
+        const email = document.getElementById('emailText').textContent;
+        
+        // Mobil cihazlar için alternatif kopyalama yöntemi
+        if (navigator.clipboard && window.isSecureContext) {
+            // Modern tarayıcılar için
+            navigator.clipboard.writeText(email).then(() => {
+                showCopiedMessage();
+            });
+        } else {
+            // Eski tarayıcılar ve güvenli olmayan bağlantılar için
+            const textArea = document.createElement("textarea");
+            textArea.value = email;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                textArea.remove();
+                showCopiedMessage();
+            } catch (err) {
+                console.error('Kopyalama başarısız oldu', err);
+                textArea.remove();
+            }
+        }
+    }
+
+    function showCopiedMessage() {
+        const originalText = document.getElementById('emailText').textContent;
+        document.getElementById('emailText').textContent = 'Kopyalandı!';
+        
+        setTimeout(() => {
+            document.getElementById('emailText').textContent = originalText;
+        }, 2000);
+    }
+    </script>
+</body>
+</html>
