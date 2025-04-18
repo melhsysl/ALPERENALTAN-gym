@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 400;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea {
+    font-family: inherit;
+}

@@ -1,0 +1,35 @@
+.top-info-bar {
+    background-color: #333;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.location-info, .business-info, .social-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.email {
+    cursor: pointer;
+}
+
+.social-contact a {
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.social-contact a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .top-info-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

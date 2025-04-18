@@ -1,0 +1,265 @@
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about {
+    background-color: #333;
+    padding: 5rem 0;
+    color: #fff;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;  /* Kartlar arası boşluğu artırdık */
+    margin-bottom: 100px;  /* Alt kısımla arasındaki boşluğu artırdık */
+    padding: 20px;  /* Dış kenar boşluğu ekledik */
+}
+
+.about-card {
+    background: #444;
+    padding: 40px 30px;  /* İç boşluğu artırdık */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    color: #fff;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transform: rotate(-45deg);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card-icon i {
+    font-size: 32px;
+    color: #333;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.about-card:hover .card-icon {
+    transform: rotate(0deg);
+    background: linear-gradient(135deg, #ffb700, #ffd700);
+}
+
+.about-card:hover .card-icon i {
+    transform: rotate(0deg) scale(1.2);
+}
+
+.card-icon i {
+    font-size: 30px;
+    color: #333;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-image {
+    position: relative;
+    max-width: 500px;  /* 400px'den 500px'e çıkardık */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Grid oranını eşitledik */
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;  /* Container genişliğini artırdık */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.experience-badge {
+    position: absolute;
+    right: -20px;
+    bottom: 30px;
+    background: #ffd700;
+    padding: 15px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.years {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1;
+}
+
+.text {
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.features-list {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(10px);
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.feature-item i {
+    color: #ffd700;
+    font-size: 24px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 50%;
+}
+
+.feature-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.about-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ffd700;
+    color: #333;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.about-cta:hover {
+    background: #fff;
+    color: #333;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .experience-badge {
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-header {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.header-line {
+    width: 80px;
+    height: 4px;
+    background: #ffd700;
+    border-radius: 2px;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-container {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.feature-item i {
+    font-size: 22px;
+}

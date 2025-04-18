@@ -1,0 +1,64 @@
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message-image {
+        width: 50%;
+        margin: 0 auto 20px auto;
+    }
+
+    .working-hours li, 
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-column h3,
+    .footer-column p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding-left: 2rem;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        margin: 0.25rem 0;
+    }
+
+    .nav-links a {
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 0;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.2rem 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .mobile-menu {
+        align-items: flex-start;
+        padding-top: 2.5rem;
+    }
+}

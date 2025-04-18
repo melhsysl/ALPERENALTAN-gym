@@ -1,0 +1,150 @@
+.top-info-bar {
+    background-color: #333;
+    padding: 8px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1020;
+}
+
+.top-info-bar a {
+    text-decoration: none;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.business-info {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+
+.business-info > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.business-info i,
+.location-info i {
+    color: #fff;
+}
+
+.social-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.social-contact a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-contact a:hover {
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    z-index: 1006;
+    background: none;
+}
+
+nav {
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 60%,
+        rgba(0, 0, 0, 0.7) 80%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 0 25px;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    padding: 5px 0;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
